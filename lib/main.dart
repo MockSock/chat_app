@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'models/user.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -35,14 +37,24 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ListView.builder(itemBuilder: (context, index) {
               return Card(
+                elevation: 4.0,
                 color: Theme.of(context).primaryColor,
-                child: const Text('I would be a user!'),
+                child: Row(
+                  children: [
+                    Column(
+                      children: const [
+                        Text('Test'),
+                        Text('123'),
+                      ],
+                    ),
+                  ],
+                ),
               );
             })
           ],
