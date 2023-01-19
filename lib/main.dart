@@ -38,7 +38,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
+          children: <Widget>[
+            ListView.builder(itemBuilder: (context, index) {
+              return Card(
+                color: Theme.of(context).primaryColor,
+                child: const Text('I would be a user!'),
+              );
+            })
+          ],
         ),
       ),
     );
