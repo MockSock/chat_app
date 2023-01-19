@@ -46,13 +46,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 elevation: 4.0,
                 color: Theme.of(context).primaryColor,
                 child: Row(
-                  children: [
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
                     Column(
                       children: const [
                         Text('Test'),
                         Text('123'),
                       ],
                     ),
+                    const Text('I would be a message!'),
                   ],
                 ),
               );
