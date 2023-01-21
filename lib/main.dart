@@ -37,7 +37,16 @@ class _MyHomePageState extends State<MyHomePage> {
       userId: 24601,
       userName: 'ValjeansOnSale',
     ),
+    User(
+      userId: 43324,
+      userName: '404NeverFound',
+    ),
+    User(
+      userId: 20202,
+      userName: 'BackToBackFutureInc',
+    ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
