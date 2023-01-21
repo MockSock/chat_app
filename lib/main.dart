@@ -31,6 +31,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // Dummy data
+  final List<User> userList = [
+    User(
+      userId: 24601,
+      userName: 'ValjeansOnSale',
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,26 +47,28 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          ListView.builder(itemBuilder: (context, index) {
-            if (index.isOdd) return const Divider();
+          ListView.builder(
+              itemCount: userList.length,
+              itemBuilder: (context, index) {
+                if (index.isOdd) return const Divider();
 
-            return Card(
-              elevation: 4.0,
-              color: Theme.of(context).primaryColor,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Column(
-                    children: const [
-                      Text('Test'),
-                      Text('123'),
+                return Card(
+                  elevation: 4.0,
+                  color: Theme.of(context).primaryColor,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        children: const [
+                          Text('Test'),
+                          Text('123'),
+                        ],
+                      ),
+                      const Text('I would be a message!'),
                     ],
                   ),
-                  const Text('I would be a message!'),
-                ],
-              ),
-            );
-          })
+                );
+              })
         ],
       ),
     );
