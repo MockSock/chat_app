@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/chat_list.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -37,7 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            ChatList(),
+          ],
         ),
       ),
     );
