@@ -1,5 +1,5 @@
-abstract class UserInterface {
-  UserInterface({
+abstract class User {
+  User({
     required this.userId,
     required this.userName,
   });
