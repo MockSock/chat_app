@@ -37,30 +37,30 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ListView.builder(itemBuilder: (context, index) {
-              return Card(
-                elevation: 4.0,
-                color: Theme.of(context).primaryColor,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Column(
-                      children: const [
-                        Text('Test'),
-                        Text('123'),
-                      ],
-                    ),
-                    const Text('I would be a message!'),
-                  ],
-                ),
-              );
-            })
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ListView.builder(itemBuilder: (context, index) {
+            if (index.isOdd) return const Divider();
+
+            return Card(
+              elevation: 4.0,
+              color: Theme.of(context).primaryColor,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Column(
+                    children: const [
+                      Text('Test'),
+                      Text('123'),
+                    ],
+                  ),
+                  const Text('I would be a message!'),
+                ],
+              ),
+            );
+          })
+        ],
       ),
     );
   }
