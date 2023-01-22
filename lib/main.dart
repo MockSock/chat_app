@@ -19,14 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
-
-      // Named Routes
-      // initialRoute will act as home
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const MyHomePage(title: 'Flutter Chat App'),
-        '/chatId': (context) => ChatScreen(),
-      },
+      home: const MyHomePage(title: 'Flutter Chat App'),
     );
   }
 }
