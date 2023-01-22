@@ -29,9 +29,10 @@ class ChatList extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Column(
-                      children: const [
-                        Text('Test'),
-                        Text('123'),
+                      children: <Widget>[
+                        Text(chatList[index].userName),
+                        // Will show time later
+                        const Text('123'),
                       ],
                     ),
                     const Text('I would be a message!'),

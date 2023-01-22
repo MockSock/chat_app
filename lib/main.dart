@@ -33,6 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // Getter for the chats
   List<User> get _currentChats {
     return NetWorkServices().getUsersJson();
   }
@@ -46,6 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // need to check for current user and add
+            // button for new chats along with search buttons
             ChatList(
               chatList: _currentChats,
             ),
