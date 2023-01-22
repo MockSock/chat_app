@@ -2,21 +2,12 @@ import 'package:flutter/material.dart';
 import '../models/user.dart';
 
 class ChatList extends StatelessWidget {
+  ChatList({
+    Key? key,
+    required this.chatList,
+  }) : super(key: key);
   // Dummy data
-  final List<User> userList = [
-    User(
-      userId: 24601,
-      userName: 'ValjeansOnSale',
-    ),
-    User(
-      userId: 43324,
-      userName: '404NeverFound',
-    ),
-    User(
-      userId: 20202,
-      userName: 'BackToBackFutureInc',
-    ),
-  ];
+  final List<User> chatList;
 
   @override
   Widget build(BuildContext context) {
@@ -24,20 +15,24 @@ class ChatList extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         ListView.builder(
-            itemCount: userList.length,
+            itemCount: chatList.length,
             itemBuilder: (context, index) {
-              if (index.isOdd) return const Divider();
+              if (index.isOdd) {
+                return Divider(color: Theme.of(context).dividerColor);
+              }
 
               return Card(
                 elevation: 4.0,
                 color: Theme.of(context).primaryColor,
+                shadowColor: Theme.of(context).shadowColor,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Column(
-                      children: const [
-                        Text('Test'),
-                        Text('123'),
+                      children: <Widget>[
+                        Text(chatList[index].userName),
+                        // Will show time later
+                        const Text('123'),
                       ],
                     ),
                     const Text('I would be a message!'),
