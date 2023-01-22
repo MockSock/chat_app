@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatelessWidget {
-  ChatScreen({
+  const ChatScreen({
     super.key,
     required this.chatId,
     required this.chatName,

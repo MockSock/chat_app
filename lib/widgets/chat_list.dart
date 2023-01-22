@@ -1,3 +1,4 @@
+import 'package:chat_app/widgets/chat_screen.dart';
 import 'package:flutter/material.dart';
 import '../models/chat.dart';
 
@@ -22,11 +23,13 @@ class ChatList extends StatelessWidget {
               }
 
               return GestureDetector(
-                onTap: () => Navigator.pushNamed(
+                onTap: () => Navigator.push(
                   context,
-                  (chatList[index].chatId).toString(),
-                  // may need to pass chatList object for displaying all data
-                  // arguments: chatList,
+                  MaterialPageRoute(
+                    builder: (context) => ChatScreen(
+                        chatId: chatList[index].chatId.toString(),
+                        chatName: chatList[index].chatName),
+                  ),
                 ),
                 child: Card(
                   elevation: 4.0,
