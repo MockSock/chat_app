@@ -38,7 +38,7 @@ class ChatList extends StatelessWidget {
                   ],
                 ),
               );
-            })
+            }),
       ],
     );
   }
