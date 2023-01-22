@@ -21,21 +21,25 @@ class ChatList extends StatelessWidget {
                 return Divider(color: Theme.of(context).dividerColor);
               }
 
-              return Card(
-                elevation: 4.0,
-                color: Theme.of(context).primaryColor,
-                shadowColor: Theme.of(context).shadowColor,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Text(chatList[index].chatName),
-                        // Shows time of last text
-                        Text(chatList[index].lastUpdated.toString()),
-                      ],
-                    ),
-                  ],
+              return GestureDetector(
+                onTap: () => Navigator.pushNamed(
+                    context, (chatList[index].chatId).toString()),
+                child: Card(
+                  elevation: 4.0,
+                  color: Theme.of(context).primaryColor,
+                  shadowColor: Theme.of(context).shadowColor,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Text(chatList[index].chatName),
+                          // Shows time of last text
+                          Text(chatList[index].lastUpdated.toString()),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               );
             }),
