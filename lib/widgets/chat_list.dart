@@ -6,7 +6,7 @@ class ChatList extends StatelessWidget {
     Key? key,
     required this.chatList,
   }) : super(key: key);
-  // Dummy data
+
   final List<Chat> chatList;
 
   @override
@@ -31,11 +31,10 @@ class ChatList extends StatelessWidget {
                     Column(
                       children: <Widget>[
                         Text(chatList[index].chatName),
-                        // Will show time later
-                        const Text('123'),
+                        // Shows time of last text
+                        Text(chatList[index].lastUpdated.toString()),
                       ],
                     ),
-                    const Text('I would be a message!'),
                   ],
                 ),
               );
