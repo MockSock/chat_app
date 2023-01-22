@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'widgets/chat_list.dart';
 import 'models/chat.dart';
-import 'services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,11 +35,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // Getter for the chats
-  List<Chat> get _currentChats {
-    return NetWorkServices().getChatsJson();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
