@@ -13,7 +13,7 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final chatAppBar = AppBar(
-      title: const Text('Chat name will be here'),
+      title: Text(chatName),
       actions: [
         IconButton(
           onPressed: () => Navigator.pop(context),
@@ -21,6 +21,7 @@ class ChatScreen extends StatelessWidget {
         )
       ],
     );
+
     return Scaffold(
       appBar: chatAppBar,
       body: Text(chatId),
