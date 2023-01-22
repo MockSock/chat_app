@@ -23,7 +23,11 @@ class ChatList extends StatelessWidget {
 
               return GestureDetector(
                 onTap: () => Navigator.pushNamed(
-                    context, (chatList[index].chatId).toString()),
+                  context,
+                  (chatList[index].chatId).toString(),
+                  // may need to pass chatList object for displaying all data
+                  // arguments: chatList,
+                ),
                 child: Card(
                   elevation: 4.0,
                   color: Theme.of(context).primaryColor,
