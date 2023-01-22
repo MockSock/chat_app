@@ -3,9 +3,9 @@ import '../models/chat.dart';
 
 class ChatList extends StatelessWidget {
   const ChatList({
-    Key? key,
+    super.key,
     required this.chatList,
-  }) : super(key: key);
+  });
 
   final List<Chat> chatList;
 
