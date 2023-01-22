@@ -20,12 +20,11 @@ class MyApp extends StatelessWidget {
       ),
 
       // Named Routes
+      // initialRoute will act as home
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(title: 'Flutter Chat App'),
       },
-
-      home: const MyHomePage(title: 'Flutter Chat App'),
     );
   }
 }
