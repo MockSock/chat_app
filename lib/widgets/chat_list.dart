@@ -30,7 +30,7 @@ class ChatList extends StatelessWidget {
                   children: <Widget>[
                     Column(
                       children: <Widget>[
-                        Text(chatList[index].ChatName),
+                        Text(chatList[index].chatName),
                         // Will show time later
                         const Text('123'),
                       ],

@@ -1,14 +1,14 @@
 class Chat {
   Chat({
-    required this.ChatId,
-    required this.ChatName,
+    required this.chatId,
+    required this.chatName,
   });
 
-  final int ChatId;
-  final String ChatName;
+  final int chatId;
+  final String chatName;
 
   factory Chat.fromJson(Map<String, dynamic> json) => Chat(
-        ChatId: json['ChatId'],
-        ChatName: json['Chatname'],
+        chatId: json['chatId'],
+        chatName: json['chatname'],
       );
 }
