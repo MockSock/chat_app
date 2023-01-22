@@ -1,11 +1,12 @@
+import 'package:chat_app/widgets/chat_screen.dart';
 import 'package:flutter/material.dart';
 import '../models/chat.dart';
 
 class ChatList extends StatelessWidget {
   const ChatList({
-    Key? key,
+    super.key,
     required this.chatList,
-  }) : super(key: key);
+  });
 
   final List<Chat> chatList;
 
@@ -21,21 +22,31 @@ class ChatList extends StatelessWidget {
                 return Divider(color: Theme.of(context).dividerColor);
               }
 
-              return Card(
-                elevation: 4.0,
-                color: Theme.of(context).primaryColor,
-                shadowColor: Theme.of(context).shadowColor,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Text(chatList[index].chatName),
-                        // Shows time of last text
-                        Text(chatList[index].lastUpdated.toString()),
-                      ],
-                    ),
-                  ],
+              return GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChatScreen(
+                        chatId: chatList[index].chatId.toString(),
+                        chatName: chatList[index].chatName),
+                  ),
+                ),
+                child: Card(
+                  elevation: 4.0,
+                  color: Theme.of(context).primaryColor,
+                  shadowColor: Theme.of(context).shadowColor,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Text(chatList[index].chatName),
+                          // Shows time of last text
+                          Text(chatList[index].lastUpdated.toString()),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               );
             }),
