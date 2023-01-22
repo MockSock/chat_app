@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/chat_list.dart';
+import 'models/user.dart';
+import 'services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +33,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<User> get _currentChats {
+    return NetWorkServices().getUsersJson();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +46,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ChatList(),
+            ChatList(
+              chatList: _currentChats,
+            ),
           ],
         ),
       ),
