@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import '../models/user.dart';
+import '../models/chat.dart';
 
 class ChatList extends StatelessWidget {
-  ChatList({
+  const ChatList({
     Key? key,
     required this.chatList,
   }) : super(key: key);
   // Dummy data
-  final List<User> chatList;
+  final List<Chat> chatList;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ChatList extends StatelessWidget {
                   children: <Widget>[
                     Column(
                       children: <Widget>[
-                        Text(chatList[index].userName),
+                        Text(chatList[index].ChatName),
                         // Will show time later
                         const Text('123'),
                       ],

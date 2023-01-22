@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/chat_list.dart';
-import 'models/user.dart';
+import 'models/chat.dart';
 import 'services.dart';
 
 void main() {
@@ -34,8 +34,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // Getter for the chats
-  List<User> get _currentChats {
-    return NetWorkServices().getUsersJson();
+  List<Chat> get _currentChats {
+    return NetWorkServices().getChatsJson();
   }
 
   @override
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // need to check for current user and add
+            // need to check for current Chat and add
             // button for new chats along with search buttons
             ChatList(
               chatList: _currentChats,
