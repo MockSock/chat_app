@@ -31,8 +31,7 @@ class HomePage extends StatelessWidget {
 
   final String title;
 
-  final FirebaseDatabase _database = FirebaseDatabase.instance;
-  final DatabaseReference _reference = _database.ref();
+  final DatabaseReference _reference = FirebaseDatabase.instance.ref();
 
   @override
   Widget build(BuildContext context) {
