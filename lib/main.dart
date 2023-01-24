@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Provider will go here one day
     return MaterialApp(
       title: 'Chat App',
       theme: ThemeData(
