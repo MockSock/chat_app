@@ -1,5 +1,4 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/chat_list.dart';
@@ -30,8 +29,6 @@ class HomePage extends StatelessWidget {
   HomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
-
-  final DatabaseReference _reference = FirebaseDatabase.instance.ref();
 
   @override
   Widget build(BuildContext context) {
