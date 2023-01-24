@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
         children: [
           // need to check for current Chat and add
           // button for new chats along with search buttons
-          ChatList(),
+          // ChatList(),
         ],
       ),
     );
