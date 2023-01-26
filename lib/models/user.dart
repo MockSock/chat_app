@@ -1,5 +1,5 @@
-class User {
-  const User({
+class AppUser {
+  const AppUser({
     required this.userId,
     required this.userName,
   });
