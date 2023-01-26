@@ -1,0 +1,1 @@
+// This will be for when a user does not want to be an anonymous user
