@@ -1,11 +1,12 @@
 class AppUser {
-  const AppUser({
+  AppUser({
     required this.userId,
     required this.userName,
   });
 
   //Super bare bones for this moment
-  final int userId;
-  final String userName;
+  // Firebase auth has this as a String?
+  String? userId;
+  String userName;
   // Will want photos in future
 }
