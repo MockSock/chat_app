@@ -9,12 +9,15 @@ class NetworkService {
 
   AppUser currentUser;
 
-  checkUserStatus() async {
+  Future checkUserStatus() async {
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user != null) {
-        // find way to repackage it and pass it along
-        currentUser = user;
-        return currentUser;
+        // A for loop would let you iterate through
+        // the values and plant them as you wish
+        for (final userData in user.providerData) {
+          currentUser.userName = userData.displayName.toString();
+          currentUser.userId = userData.uid;
+        }
       } else {
         return;
       }
