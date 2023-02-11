@@ -1,3 +1,4 @@
+import 'package:chat_app/models/user.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -17,14 +18,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Chat App',
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
+    return ChangeNotifierProvider(
+      create: (context) => AppUsers(),
+      child: MaterialApp(
+        title: 'Chat App',
+        theme: ThemeData(
+          primarySwatch: Colors.cyan,
+        ),
+        home: ChatList(),
+        // Routes will be here one day
+        // routes: ,
       ),
-      home: ChatList(),
-      // Routes will be here one day
-      // routes: ,
     );
   }
 }
