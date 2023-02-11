@@ -30,29 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
-      home: HomePage(title: 'Flutter Chat App'),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Column(
-        children: [
-          // need to check for current Chat and add
-          // button for new chats along with search buttons
-          // ChatList(),
-        ],
-      ),
+      home: ,
     );
   }
 }
