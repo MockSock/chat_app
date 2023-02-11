@@ -23,6 +23,6 @@ class AppUsers with ChangeNotifier {
 
   // Getter for firebase list of users
   List<AppUser> get appUsers {
-    return _appUsers;
+    return [..._appUsers];
   }
 }
