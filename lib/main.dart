@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => AppUsers(),
+      create: (ctx) => AppUsers(),
       child: MaterialApp(
         title: 'Chat App',
         theme: ThemeData(
