@@ -1,13 +1,9 @@
-import 'package:chat_app/widgets/chat_screen.dart';
 import 'package:flutter/material.dart';
+
 import '../models/chat.dart';
+import 'chat_screen.dart';
 
-class ChatList extends StatelessWidget {
-  const ChatList({
-    super.key,
-    required this.chatList,
-  });
-
+class ChatList extends ChangeNotifier {
   final List<Chat> chatList;
 
   @override
