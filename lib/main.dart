@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         title: 'Chat App',
         theme: ThemeData(
           primarySwatch: Colors.cyan,
+          fontFamily: 'Julee',
         ),
         home: ChatList(),
         // Routes will be here one day
