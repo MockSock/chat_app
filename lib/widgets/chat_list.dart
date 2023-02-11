@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/chat.dart';
 import 'chat_screen.dart';
 
-class ChatList extends ChangeNotifier {
+class ChatList extends StatelessWidget {
   final List<Chat> chatList;
 
   @override
