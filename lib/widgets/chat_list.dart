@@ -13,6 +13,7 @@ class ChatList extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        // Will need to change to a stream builder once firebase is set up
         ListView.builder(
             itemCount: chatList.length,
             itemBuilder: (context, index) {
