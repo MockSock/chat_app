@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
+
 import '../models/chat.dart';
 import 'chat_screen.dart';
 
 class ChatList extends StatelessWidget {
-  final List<Chat> chatList;
-
   @override
   Widget build(BuildContext context) {
+    final chatListData = Provider.of<Chat>(context);
+    final chatList = chatListData;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -38,7 +40,7 @@ class ChatList extends StatelessWidget {
                         children: <Widget>[
                           Text(chatList[index].chatName),
                           // Shows time of last text
-                          Text(chatList[index].lastUpdated.toString()),
+                          // Text(chatList[index].lastUpdated.toString()),
                         ],
                       ),
                     ],
