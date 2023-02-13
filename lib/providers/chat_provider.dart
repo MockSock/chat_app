@@ -18,4 +18,8 @@ class ActiveChats extends ChangeNotifier {
       chatName: 'Secret Dev Meetings',
     ),
   ];
+
+  List<Chat> get currentChats {
+    return [..._currentChats];
+  }
 }
