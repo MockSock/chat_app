@@ -25,8 +25,8 @@ class NetworkService {
     return;
   }
 
-  Stream<List<Chat>> chatStream() {
-    return;
+  Future getChatStream() async {
+    return _firestoreDatabase.collection('users').snapshots();
   }
 
   Stream<AppUser> userStream() {
@@ -39,8 +39,8 @@ class NetworkService {
         // A for loop would let you iterate through
         // the values and plant them as you wish
         for (final userData in user.providerData) {
-          currentUser.userName = userData.displayName.toString();
-          currentUser.userId = userData.uid;
+          currentUser!.userName = userData.displayName.toString();
+          currentUser!.userId = userData.uid;
         }
       } else {
         return;
