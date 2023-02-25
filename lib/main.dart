@@ -6,7 +6,11 @@ import 'widgets/chat_list.dart';
 // Let's make app with just firebase, then work in provider
 
 /*
-ToDo List: 
+ToDo List:
+Create Login and Sign up 
+Create Splash Screen
+Create chat List screen 
+Create a Current User screen  
 */
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
