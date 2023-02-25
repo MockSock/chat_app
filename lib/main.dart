@@ -3,6 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'widgets/chat_list.dart';
 
+// Let's make app with just firebase, then work in provider
+
+// So far there's weeks of work and nothing to show
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
