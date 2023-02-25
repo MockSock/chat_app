@@ -14,7 +14,7 @@ class NetworkService {
   String? currentUser;
 
   final FirebaseFirestore _firestoreDatabase = FirebaseFirestore.instance;
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  // final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   // CRUD operations
   Future<void> createChat() async {
@@ -27,24 +27,5 @@ class NetworkService {
 
   Future getChatStream() async {
     return _firestoreDatabase.collection('users').snapshots();
-  }
-
-  Stream<AppUser> userStream() {
-    return;
-  }
-
-  Future<void> checkUserStatus() async {
-    _firebaseAuth.authStateChanges().listen((User? user) {
-      if (user != null) {
-        // A for loop would let you iterate through
-        // the values and plant them as you wish
-        for (final userData in user.providerData) {
-          currentUser!.userName = userData.displayName.toString();
-          currentUser!.userId = userData.uid;
-        }
-      } else {
-        return;
-      }
-    });
   }
 }
