@@ -1,9 +1,13 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'widgets/chat_list.dart';
-import 'models/chat.dart';
 
+// Let's make app with just firebase, then work in provider
+
+/*
+ToDo List: 
+*/
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -15,35 +19,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Provider will go here one day
-    return MaterialApp(
-      title: 'Chat App',
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
-      ),
-      home: HomePage(title: 'Flutter Chat App'),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Column(
-        children: [
-          // need to check for current Chat and add
-          // button for new chats along with search buttons
-          // ChatList(),
-        ],
-      ),
-    );
+    return const Text('I work');
   }
 }
